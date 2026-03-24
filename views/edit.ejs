@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title><%= title %></title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.5;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      max-width: 420px;
+      padding: 8px;
+      margin-top: 4px;
+    }
+
+    button {
+      margin-top: 12px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    .error {
+      color: red;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Edit Concert</h1>
+
+  <% if (errorMessage) { %>
+    <div class="error"><%= errorMessage %></div>
+  <% } %>
+
+  <form method="POST" action="/concerts/update/<%= concert._id %>">
+    <label for="title">Concert Title</label>
+    <input id="title" name="title" type="text" value="<%= concert.title %>" />
+
+    <label for="city">City</label>
+    <input id="city" name="city" type="text" value="<%= concert.city %>" />
+
+    <label for="venue">Venue (optional)</label>
+    <input id="venue" name="venue" type="text" value="<%= concert.venue %>" />
+
+    <button type="submit">Update Concert</button>
+  </form>
+
+  <p><a href="/">Back to Home</a></p>
+</body>
+</html>
