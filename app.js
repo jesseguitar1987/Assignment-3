@@ -9,6 +9,8 @@ var logger = require("morgan");
 
 var indexRouter = require("./routes/index");
 var concertsRouter = require("./routes/concerts");
+const cors = require("cors");
+const apiConcertsRouter = require("./routes/api/concerts");
 
 var app = express();
 
@@ -31,9 +33,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+app.use(cors());
 
 app.use("/", indexRouter);
 app.use("/concerts", concertsRouter);
+app.use("/api/concerts", apiConcertsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

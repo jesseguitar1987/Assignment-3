@@ -8,14 +8,33 @@
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
+    "cors": "^2.8.6",
     "debug": "~2.6.9",
-    "dotenv": "^17.3.1",
+    "dotenv": "^17.4.1",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "mongoose": "^9.4.1",
     "morgan": "~1.9.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
-  }
+  },
+  "description": "This assignment is designed to give you practice with Express routing and templates. You'll create a small Express app that serves dynamic content based on URL parameters, and which uses a template engine to render HTML pages. The focus is on understanding how to define routes, handle parameters, and render views with a template engine. The result will be a simple web application that displays information, accepts new information via an HTML FORM, and which is deployed to the web for others to access.",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesseguitar1987/Assignment-3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jesseguitar1987/Assignment-3/issues"
+  },
+  "homepage": "https://github.com/jesseguitar1987/Assignment-3#readme"
 }
